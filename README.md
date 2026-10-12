@@ -4,6 +4,8 @@ These playbooks read and write the resource policy on one Amazon S3 bucket. They
 
 Reading uses `amazon.aws.s3_bucket_info`. Writing uses `amazon.aws.s3_bucket`. That module creates the bucket when it is missing, then stores the policy you pass. The `policy` value is the entire document S3 keeps for the bucket. Add or remove statements in that document and run the playbook again. A second run reports `changed: false` when the stored policy already matches.
 
+Changes for each release are listed in [CHANGELOG.md](CHANGELOG.md).
+
 ## Files
 
 | File | Purpose |
