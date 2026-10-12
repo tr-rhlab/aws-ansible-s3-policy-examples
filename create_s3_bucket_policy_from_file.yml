@@ -2,7 +2,7 @@
 # Example: create a bucket if needed and set its resource policy from a JSON
 # file. Written for a customer demo.
 #
-#   ansible-playbook put_s3_bucket_policy_from_file.yml \
+#   ansible-playbook create_s3_bucket_policy_from_file.yml \
 #     -e bucket_name=policy-from-file \
 #     -e aws_region=us-east-1
 #
@@ -11,10 +11,11 @@
 # Rehearsal endpoint, such as fakecloud. Leave this off for a customer account:
 #   -e endpoint_url=http://127.0.0.1:4566
 #
-# lookup('file') reads the JSON on the control node. The file is the whole
-# bucket policy, so a reviewer can read it without the playbook. Plain JSON
-# has no variables: 123456789012 and policy-from-file are the example account
-# and bucket. Replace both for a customer, and pass the same bucket name in.
+# lookup('ansible.builtin.template') renders the file on the control node,
+# so Jinja2 is expanded before from_json parses it. The file is the whole
+# bucket policy, so a reviewer can read it without the playbook. The sample
+# uses account 123456789012 and bucket policy-from-file. Replace both for a
+# customer, and pass the same bucket name in.
 
 - name: Set an S3 bucket policy from a JSON file
   hosts: localhost

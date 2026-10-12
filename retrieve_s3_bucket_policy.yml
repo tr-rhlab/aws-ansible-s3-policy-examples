@@ -2,7 +2,7 @@
 # Read the resource policy on one S3 bucket with the amazon.aws collection.
 #
 #   ansible-galaxy collection install -r collections/requirements.yml
-#   ansible-playbook get_s3_bucket_policy.yml \
+#   ansible-playbook retrieve_s3_bucket_policy.yml \
 #     -e bucket_name=my-bucket \
 #     -e aws_region=us-east-1
 #

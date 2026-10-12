@@ -2,11 +2,12 @@
 # Example: create a bucket if needed and set its resource policy from YAML
 # in this file. Written for a customer demo.
 #
-#   ansible-playbook put_s3_bucket_policy_inline.yml \
+#   ansible-playbook create_s3_bucket_policy.yml \
 #     -e bucket_name=my-bucket \
 #     -e aws_region=us-east-1 \
 #     -e aws_account_id=123456789012 \
-#     -e reader_role_name=AppReader
+#     -e reader_role_name=AppReader \
+#     -e policy=present
 #
 # Optional: -e aws_profile=my-profile
 # Rehearsal endpoint, such as fakecloud. Leave this off for a customer account:
