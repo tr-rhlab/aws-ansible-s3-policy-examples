@@ -18,5 +18,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `collections/requirements.yml`, which installs `amazon.aws` 9.0.0 or newer.
 - A README with requirements, a customer demo, and a fakecloud rehearsal.
 
-[Unreleased]: https://github.com/tr-rhlab/aws-ansible-examples/compare/v1.0.0...HEAD
-[1.0.0]: https://github.com/tr-rhlab/aws-ansible-examples/releases/tag/v1.0.0
+[Unreleased]: https://github.com/tr-rhlab/aws-ansible-s3-policy-examples/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/tr-rhlab/aws-ansible-s3-policy-examples/releases/tag/v1.0.0
